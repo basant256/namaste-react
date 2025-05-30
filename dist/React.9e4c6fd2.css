@@ -1,0 +1,124 @@
+.header {
+  border-radius: 10px;
+  justify-content: space-between;
+  display: flex;
+  box-shadow: 10px 10px 20px #0000004d, -10px -10px 20px #0000001a;
+}
+
+.logo {
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+}
+
+.nav-items > ul {
+  font-size: 24px;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.body {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #0000004d, -10px -10px 20px #0000001a;
+}
+
+.search {
+  margin: 10px;
+  padding: 10px;
+}
+
+.restraunt-container {
+  flex-wrap: wrap;
+  padding: 30px;
+  display: flex;
+}
+
+.res-card {
+  border-radius: 10px;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.eNZkiz {
+  filter: drop-shadow(0 2px 8px #0000001a);
+  border-radius: 5px;
+  width: 100%;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.res-img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  box-shadow: 10px 10px 20px #0000004d, -10px -10px 20px #0000001a;
+}
+
+.sw-restaurant-card-subtext-container > div {
+  height: 30%;
+}
+
+.restraunt-name {
+  font-weight: bold;
+}
+
+.svg-style {
+  stroke: #02060ceb;
+  fill: #02060ceb;
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.bKIGLW {
+  letter-spacing: -.4px;
+  color: #02060ceb;
+  overflow-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.cbhbwm {
+  letter-spacing: -.4px;
+  color: #02060ceb;
+  margin-top: -5px;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 21px;
+}
+
+.cusine-names {
+  margin-top: 5px;
+  display: flex;
+}
+
+.card_content {
+  padding: 5px;
+}
+/*# sourceMappingURL=React.9e4c6fd2.css.map */

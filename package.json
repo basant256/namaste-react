@@ -2,8 +2,10 @@
   "name": "y",
   "version": "1.0.0",
   "description": "This is my learning of React",
-  "main": "App.js",
+  
   "scripts": {
+    "start" : "parcel index.html",
+    "build" : "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -21,5 +23,12 @@
   "homepage": "https://github.com/basant256/namaste-react#readme",
   "devDependencies": {
     "parcel": "^2.15.2"
-  }
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
 }
