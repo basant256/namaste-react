@@ -114,3 +114,12 @@ svg:not(:root) {
 .card_content {
     padding: 5px;
 }
+
+.filter-btn{
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 40px;
+    border-radius: 5px;
+    background-color: #465a87;
+    border-color:#465a87;
+}

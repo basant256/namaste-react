@@ -13,3 +13,12 @@
 *   -Address
 *   -Contacts
 */
+
+-Two types of export/import
+-  default export/import
+-    export default component
+-    import from "path"
+
+- Named export/import
+-  export const component/variable
+-  import {component/variable} from "path"
