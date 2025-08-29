@@ -1,10 +1,11 @@
 
 import RestrauntCard from "./RestrauntCard";
 import Cards from "../utils/mockData"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Body = () => {
     let [resList,setResList] = useState(Cards);
+    useEffect(()=>{},[]);
     return (
         <div className="body">
             <div className="filter">
