@@ -1,11 +1,20 @@
 
 import RestrauntCard from "./RestrauntCard";
-import Cards from "../utils/mockData"
+
 import { useState, useEffect } from "react";
 
 const Body = () => {
-    let [resList,setResList] = useState(Cards);
-    useEffect(()=>{},[]);
+    let [resList,setResList] = useState([]);
+    useEffect(()=>{
+       fetchData();
+    },[]);
+
+    const fetchData = async() => {
+        const data = await fetch("http://localhost:5000/restaurants");
+        const json = await data.json();
+        setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+        console.log(json.data.cards[1]);
+    }
     return (
         <div className="body">
             <div className="filter">

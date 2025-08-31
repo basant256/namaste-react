@@ -39,7 +39,34 @@
     padding:20px;
     display: flex;
     flex-wrap: wrap;
-    
+    gap: 16px;              /* Add gap between cards */
+    justify-content: center;/* Center cards horizontally */
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 900px) {
+    .restraunt-container {
+        gap: 12px;
+        padding: 12px;
+    }
+    .res-card {
+        width: 45vw; /* Make cards wider on smaller screens */
+        min-width: 160px;
+        max-width: 300px;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .restraunt-container {
+        gap: 8px;
+        padding: 8px;
+    }
+    .res-card {
+        width: 90vw; /* Full width on mobile */
+        min-width: 140px;
+        max-width: 100%;
+    }
 }
 .res-card {
     padding: 10px;
@@ -66,8 +93,10 @@
     border-radius: 10px;
 }
 .sw-restaurant-card-subtext-container {
-    
-    height:10%;
+    display: flex;
+    align-items: center; /* Vertically center icon and text */
+    gap: 8px;            /* Optional: space between icon and text */
+    height: auto;        /* Remove fixed height if present */
 }
 .restraunt-name{
     font-weight: bold;
