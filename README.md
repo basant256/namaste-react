@@ -22,3 +22,6 @@
 - Named export/import
 -  export const component/variable
 -  import {component/variable} from "path"
+
+install Parcel as a development dependency:
+npm install parcel-bundler --save-dev
