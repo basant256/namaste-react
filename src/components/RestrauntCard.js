@@ -1,7 +1,8 @@
 
 import {CDN_URL} from "../utils/constants"
+
 const RestrauntCard = (props) => {
-    console.log(props.obj);
+    //console.log(props.obj);
     if(props===undefined){
         return;
     }
