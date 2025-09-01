@@ -18,11 +18,12 @@ const Body = () => {
         console.log(resTaurantList);
     }
 
-    if(resTaurantList.length===0){
-        return <Shimmer/>
-    }
+    //conditional rendering
+    // if(resTaurantList.length===0){
+    //     return <Shimmer/>
+    // }
 
-    return (    
+    return resTaurantList.length===0 ? <Shimmer/> : (    
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
