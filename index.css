@@ -284,3 +284,80 @@
     background: #a0521d;
     box-shadow: 0 2px 4px rgba(210, 105, 30, 0.12);
 }
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin:10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    transition: box-shadow 0.2s;
+    min-height: 60px;
+    margin-bottom: 24px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.search-box {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 200px;
+}
+
+.search-box:focus {
+    border-color: #d2691e;
+}
+.search-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #d2691e;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.18s, box-shadow 0.18s;
+}
+.search-btn:hover {
+    background: #a0521d;
+    box-shadow: 0 2px 4px rgba(210, 105, 30, 0.12);
+}
+
+/* Additional styles for better UX */
+body {  
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+* {
+    box-sizing: border-box;
+}
+/* Scrollbar styling for better aesthetics */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+}
