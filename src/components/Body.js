@@ -3,8 +3,14 @@ import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 const Body = () => {
+    //local state variable - super powerful variable
     
     const [resTaurantList,setResList] = useState([]);
+    
+    //copy of the original list for search filter
+    const [filteredResList,setFilteredResList] = useState([]);
+
+
     const [searchText, setSearchText] = useState("");
     useEffect(()=>{
        fetchData();
@@ -15,6 +21,7 @@ const Body = () => {
         const json = await data.json();
         //optional chaining
         setResList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredResList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         console.log(resTaurantList);
     }
 
@@ -32,18 +39,21 @@ const Body = () => {
                         setSearchText(e.target.value);
                     }}/>
                     <button className="search-btn" onClick={() =>{
-                        const filteredRes =  resTaurantList.filter(res => res.info.name.toLowerCase().includes({searchText}.toString().toLowerCase()));
-                        setResList(filteredRes);
+                        console.log(searchText);
+                        console.log(resTaurantList);
+                        //filtering the data    
+                        const filteredRes =  resTaurantList.filter(res => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                        setFilteredResList(filteredRes);
 
                     }}>Search</button>
                 </div> 
                 <button className="filter-btn" onClick={() => {
-                  const resListFilter =  resTaurantList.filter(res =>res.info.avgRating > 4.3)
-                  setResList(resListFilter);
+                  const filteredResList =  resTaurantList.filter(res =>res.info.avgRating > 4.3)
+                  setFilteredResList(filteredResList);
                 }}>Top Rated Restraunts</button>
             </div>
             <div className="restraunt-container">
-                 {resTaurantList.map((object, i) => (<RestrauntCard obj={object} key={object.info.id} />))}
+                 {filteredResList.map((object, i) => (<RestrauntCard obj={object} key={object.info.id} />))}
                 {/* <RestrauntCard resName="Meghna Foods" cusineName="Biryani, North Indian, Asian"/>
                 <RestrauntCard resName="KFC" cusineName="Crispy Chicken, Chicken Wings,Burger"/> */}
                 
