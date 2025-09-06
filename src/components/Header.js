@@ -1,8 +1,12 @@
 import { Logo_URL } from "../utils/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HeaderComponent = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        console.log("useEffect called");
+    }, [isLoggedIn]);
 
     return (
         <div className="header">
