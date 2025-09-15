@@ -2,11 +2,12 @@
 import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router";
 const Body = () => {
     //local state variable - super powerful variable
     
     const [resTaurantList,setResList] = useState([]);
-    
+
     //copy of the original list for search filter
     const [filteredResList,setFilteredResList] = useState([]);
 
@@ -53,7 +54,12 @@ const Body = () => {
                 }}>Top Rated Restraunts</button>
             </div>
             <div className="restraunt-container">
-                 {filteredResList.map((object, i) => (<RestrauntCard obj={object} key={object.info.id} />))}
+                 {filteredResList.map((object, i) => (
+                    <Link key={object.info.id} to={"/restaurant/"+object.info.id}><RestrauntCard obj={object} /></Link>
+                    
+                    )
+                )
+            }
                 {/* <RestrauntCard resName="Meghna Foods" cusineName="Biryani, North Indian, Asian"/>
                 <RestrauntCard resName="KFC" cusineName="Crispy Chicken, Chicken Wings,Burger"/> */}
                 

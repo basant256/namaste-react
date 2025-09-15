@@ -361,3 +361,31 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: #b3b3b3;
 }
+
+.menu {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between name and price */
+    padding: 12px 0;        /* Vertical padding */
+    border-bottom: 1px solid #eee;
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.menu-item-price {
+    font-size: 16px;
+    color: #888;
+}
